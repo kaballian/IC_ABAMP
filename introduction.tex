@@ -1,0 +1,44 @@
+\section{introduction}
+The purpose of this project is to design and implement a Class AB audio power Amplifier, with some general
+requirements.\\
+From the provided requirements of the project, the below states specifications are:
+\begin{itemize}
+    \item \textbf{Output power} - This specification is a free choice and will be expanded later
+    \item \textbf{Input Resistance} - $ >= 10k\Omega$
+    \item \textbf{Output Resistance} - $< 5\Omega$
+    \item \textbf{Bandwidth} - bandwidth is specified to be in the human hearing range 20Hz - 20KHz
+    \item \textbf{Design Structure} - must be based on a three stage topology, differential pre-amp, 
+    voltage amp stage and power amp stage.
+
+\end{itemize}
+
+From these given, overall requirements, our derived specifications are:
+\begin{itemize}
+    \item \textbf{Output power} - $P_{out}= 200mW $
+    \item \textbf{load size} - Giver the output power, the chosen load size is $R_{load} = 16\Omega$
+    \item \textbf{Supply contrains} - given power requirements and load size, the supply rails of the Amplifier 
+    system is $\pm 15V$
+\end{itemize} 
+
+From our on own requirements, it is possible to derive some other specifications about the system.
+The output voltage/current RMS 
+
+
+\begin{align}
+        V_{outRMS} = \sqrt{P_{out} \cdot R_{load}}\\
+        I_{outRMS} = \sqrt{\frac{P_{out}}{R_{load}}} 
+\end{align}
+
+We assume an input signal of $V_{inRMS} = 20mV$, this gives an overall gain of
+
+\begin{align}
+    \frac{V_{out}}{V_{in}} \approx 126
+\end{align}
+
+To limit the Amplifier to the human hearing range, an lowpass filter is added to limit frequency content above 20KHz\\
+
+\begin{align}
+    f_C = 20KHz\\
+    C = 470\mu F\\
+    X_C = \frac{1}{2\pi f \cdot C} = 0.017\Omega
+\end{align}

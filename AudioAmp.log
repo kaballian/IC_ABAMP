@@ -1,0 +1,9 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\AU_IC\Assignment AB amp\AudioAmp.net
+Start Time: Sun Dec 14 20:50:58 2025
+C:\AU_IC\Assignment AB amp\AudioAmp.net(3): Undefined model "bd139".
+Q1 VCC N003 N004 0 BD139
+                   ^^^^^
+C:\AU_IC\Assignment AB amp\AudioAmp.net(10): Undefined model "bd140".
+Q8 VSS N009 N010 0 BD140
+                   ^^^^^
