@@ -1,1 +1,40 @@
 \section{Voltage Amplification Stage}
+Following the differential amplifier is a Voltage amplification stage. The purpose of this circuit is to
+gain the signal.\\ 
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.4\textwidth]{VAS.png}
+\end{figure}
+The topology is a common-emitter amplifier.R10 and R11 is setting the bias point of the stage
+
+\begin{align}
+        V_{bQ3} = V_{SS} + \frac{R_{11}}{R_{10}+R_{11}} (V_{CC} - V_{SS}) \approx 1.22V
+\end{align}
+The Emitter of Q3 will then sit a diode drop below:
+\begin{align}
+    V_{Eq3} = V_{bQ3} - 0.7V
+\end{align}
+And the emitter current becomes:
+\begin{align}
+    I_{Eq3} = \frac{V_{Eq3} - V_{SS}}{R_9} = 10.4mA
+\end{align}
+%denne strøm skal lige genover vejes, hvis vi skal have ~10mA til at køre igennem RC, så kan det gøre drive Q3 i mætning
+%fordi
+%VB = 1.22V
+%R9 = 1.5k
+%VE = VB-0.7V
+%IE = (VE-VSS)/1.5k = ~10.3mA
+
+
+Aiming for a "symmetric swing" around the quiescent collector voltage, meaning that we place the collector voltage at 
+halfway between out supply rail and a lower limits, which is set by out NPN transistor. This lower is critical, cause it ensures
+that the transistor does not hit saturation, so $V_{CE}$ at the lowest potential should still keep the transistor in the active region.
+We can then set it as:
+\begin{align}
+    V_{Cq} = \frac{V_{CC + 0.82V}}{2} = 7.92V
+\end{align}
+the collector resistances then becomes: 
+\begin{align}
+    R_C = \frac{V_{CC} - V_{Cq}}{I_C} 
+\end{align}
