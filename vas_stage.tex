@@ -7,6 +7,32 @@ gain the signal.\\
     \includegraphics[width=0.4\textwidth]{VAS.png}
 \end{figure}
 The topology is a common-emitter amplifier.R10 and R11 is setting the bias point of the stage
+The design goal of this stage is a gain of 3. And to realize this goal
+a few other contraints are chosen to make it easier, such as the emitter current
+should be $I_E = 5mA$ and $V_{CE} = 7.5V$, to ensure in the active region.\\
+
+From these contrains the ratio of the emitter and collector resistor
+can be determined. Also note that this the current design is for DC, thus
+for the AC gain an additional impedance can be coupled in to reduce the emitter
+resistance in AC and increase the gain.
+
+\begin{align}
+    i_B = \frac{v_{in}}{R_{IN}}
+    v_o = -R_C i_b \beta
+\end{align}
+subtituting
+\begin{align}
+    v_o = -R_C \frac{v_{in}}{R_{IN}} \beta \Rightarrow -\alpha \frac{R_C}{R_E}
+\end{align}
+Setting $R_C = 3k\Omega$, means that, at AC, $R_E = 1k\Omega$
+
+To achieve the current at DC, the emitter resistance can be calculated:
+\begin{align}
+    R_{Edc} = \frac{V_{CC}-R_C I_E \alpha - V{CE}-V_{EE}}{I_E} \approx 1.5k\Omega
+\end{align}
+
+To compensate for this in AC, an impedance consisting of a resistance and a 
+capacitor is set in parallel with the emitter resistance.
 
 \begin{align}
         V_{bQ3} = V_{SS} + \frac{R_{11}}{R_{10}+R_{11}} (V_{CC} - V_{SS}) \approx 1.22V

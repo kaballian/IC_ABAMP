@@ -24,14 +24,14 @@ The collector resistance then becomes
     V_{Ccm} = V_{CC} - R_{Ccm}\cdot I_{Ecm}\alpha \Rightarrow R_{Ccm} = \frac{V_{CC} - V_{Ccm}}{I_{Ecm}\alpha} = 8.175k\Omega
 \end{align} 
 
-\textbf{AC analysis}
+\textbf{AC analysis}\\
 For AC analysis, the intrinsic emitter resistance is $r_e = \frac{V_T}{2mA} = 12.5\Omega$ and the external emitter resistance is $R_E = 110\Omega$
-this yields a total emitter resistance of $r_{etot} = 12.5\Omega + 110\Omega = 122.5\Omega$. Thus changes to temperature only affects the term 
+this yields a total emitter resistance of $r_{etot} = 12.5\Omega + 75\Omega = 87.5\Omega$. Thus changes to temperature only affects the term 
 with $V_T$, which is $\approx \pm 2mV/C$
 
 The goal here is to relate the differential input voltage $V_d$ to the output voltage $V_o$, by elimintating the internal transistor current $i_b$,
 this will yield the gain. Since the desired gain for this Amplifier is chosen, we can use this to find the emitter resistance, which stated earlier is
-$R_E = 110\Omega$.
+$R_E = 75\Omega$.
 
 Since the other input of the differential amplifier is grounded, the differential voltage for Q4 becomes:
 \begin{align}
@@ -54,7 +54,7 @@ These two defines the differential gain:
 Since the gain has already been chosen in the design stage, as mentioned ealier, $ A_{diff} \approx 42$.
 The emitter resistance can be calculated, by solving for $R_E$:
 \begin{align}
-    A_{diff} \rightarrow R_E \approx 109.524\Omega
+    A_{diff} \rightarrow R_E \approx 75\Omega
 \end{align}
 
 It should be noted that the expression for the differential gain gets rather lengthy when expanded, thus for gains much larger
@@ -66,9 +66,9 @@ than $\beta \gg 1$, the 1 term in $(\beta +1)$, can safely be ignored. This fact
 
 
 \subsection{Current Sink}
-The pupose of the current mirror is to supply, or in this case "sink" the required current for the differential Amplifier,
-this means that it should be specified to draw the sum of the currents leaving both branches of the diff amp.
-thus the equations becomes:
+The pupose of the current mirror is to supply, or in this case "sink" the required current for the differential amplifier.
+This means that it should be specified to draw the sum of the currents leaving both branches of the diff amp.
+Thus the equations becomes:
 \begin{align}
     I_{CQ6} = I_{EEcm} = 4mA\\
 \end{align}

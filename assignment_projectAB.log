@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.19)  14 DEC 2025 23:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.3)  27 DEC 2025 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"c:/AU_IC/Assignment AB amp/assignment_projectAB.tex"
-(c:/AU_IC/Assignment AB amp/assignment_projectAB.tex
+**c:/Users/alext/Documents/IC/IC_project/IC_ABAMP/assignment_projectAB.tex
+(c:/Users/alext/Documents/IC/IC_project/IC_ABAMP/assignment_projectAB.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\alext\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -892,12 +892,11 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `assignment_projectAB.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'assignment_projectAB.bbl' not found.
-
-No file assignment_projectAB.bbl.
+Package biblatex Info: ... file 'assignment_projectAB.bbl' found.
+ (assignment_projectAB.bbl)
 Package biblatex Info: Reference section=0 on input line 27.
 Package biblatex Info: Reference segment=0 on input line 27.
-(forside.tex
+ (forside.tex
 <logo.png, id=4, 803.0pt x 168.63pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
@@ -913,11 +912,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 ) [2
 
 ] (input_stage.tex
-<diff_amp.png, id=23, 554.82281pt x 670.75594pt>
+<diff_amp.png, id=23, 256.70906pt x 321.45094pt>
 File: diff_amp.png Graphic file (type png)
 <use diff_amp.png>
 Package pdftex.def Info: diff_amp.png  used on input line 16.
-(pdftex.def)             Requested size: 257.35518pt x 311.13066pt.
+(pdftex.def)             Requested size: 257.35518pt x 322.28398pt.
  [3
 
  <./diff_amp.png>]) [4] (vas_stage.tex
@@ -925,14 +924,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
 
-<VAS.png, id=33, 503.63156pt x 652.68843pt>
+<VAS.png, id=33, 153.57375pt x 217.5628pt>
 File: VAS.png Graphic file (type png)
 <use VAS.png>
 Package pdftex.def Info: VAS.png  used on input line 7.
-(pdftex.def)             Requested size: 205.881pt x 266.80725pt.
-) [5
+(pdftex.def)             Requested size: 205.881pt x 291.68535pt.
 
- <./VAS.png>] (assignment_projectAB.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+
+ []
+
+[5
+
+ <./VAS.png>]) [6] (assignment_projectAB.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -942,17 +946,17 @@ Package logreq Info: Writing requests to 'assignment_projectAB.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56676 strings out of 474486
- 1495788 string characters out of 5743754
- 2603869 words of memory out of 5000000
- 78402 multiletter control sequences out of 15000+600000
+ 56679 strings out of 474485
+ 1496146 string characters out of 5743734
+ 2603892 words of memory out of 5000000
+ 78404 multiletter control sequences out of 15000+600000
  563266 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,10n,121p,768b,1732s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,10n,121p,787b,1732s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\alext\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on assignment_projectAB.pdf (5 pages, 205859 bytes).
+Output written on assignment_projectAB.pdf (6 pages, 202787 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
