@@ -1,6 +1,6 @@
 LTspice 24.1.9 for Windows
 Circuit: C:\Users\alext\Documents\IC\IC_project\IC_ABAMP\AudioAmp.net
-Start Time: Sat Dec 27 18:38:53 2025
+Start Time: Sat Dec 27 21:06:59 2025
 solver = Normal
 Maximum thread count: 8
 tnom = 27
@@ -26,7 +26,7 @@ Gmin = 2.70769e-13
 Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
-Total elapsed time: 5.525 seconds.
+Total elapsed time: 1.239 seconds.
 
 Files loaded:
 C:\Users\alext\Documents\IC\IC_project\IC_ABAMP\AudioAmp.net

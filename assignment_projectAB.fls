@@ -422,6 +422,20 @@ INPUT .\power_amp.png
 INPUT .\power_amp.png
 INPUT .\power_amp.png
 INPUT .\power_amp.png
+INPUT .\SIM_output_I.png
+INPUT .\SIM_output_I.png
+INPUT .\SIM_output_I.png
+INPUT .\SIM_output_I.png
+INPUT .\SIM_output_I.png
+INPUT .\SIM_output_I.png
+INPUT .\SIM_output_I.png
+INPUT .\measurement_graph.png
+INPUT .\measurement_graph.png
+INPUT .\measurement_graph.png
+INPUT .\measurement_graph.png
+INPUT .\measurement_graph.png
+INPUT .\measurement_graph.png
+INPUT .\measurement_graph.png
 INPUT assignment_projectAB.aux
 INPUT assignment_projectAB.run.xml
 OUTPUT assignment_projectAB.run.xml
@@ -447,3 +461,5 @@ INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb

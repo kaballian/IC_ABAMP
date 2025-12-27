@@ -13,3 +13,63 @@ cross distortion is avoided.
     \includegraphics[width=0.7\textwidth]{power_amp.png}
     \caption{Output stage}
 \end{figure}
+
+
+To bias the two output transistors, a Vbe multiplier has been implemented.
+Q15 and the two resistors R37/38 generate a controlled voltage, 
+which is used to determine the working point of the output follow the expression:
+\begin{align}
+    V_{bias} \approx V_{beQ15} \cdot (1+\frac{R37}{R38}) \approx 2
+\end{align}
+
+This then becomes a scale factor for the transistors base emitter voltage, meaning
+that the collector voltage will sit an additional drop above it, of $\approx 1.4V$
+Practically this circuit also provides the ability to thermally track or follow
+the output transistors, due the possibility to physically mount the circuit thermally 
+close to the output.\\
+
+The biasing part of the stage is driven by a current sink similar to the one found in 
+the input stage, however this sinks $3mA$ of current.
+This means that the voltages at the output stages are.
+
+\begin{align}
+    V_{R47} = 3mA \cdot 4.8k\Omega = 14.4V
+    V_{Bm3} = 0.6V
+    V_{R42} = 3mA \cdot 4.5k\Omega = 13.5V
+    V_{Bm4} = -15V + 13.5V = -1.5V
+\end{align}
+
+Quiescent current through the output stage can then be expressed as:
+
+\begin{align}
+    I_{Q} \approx \frac{V_{bias}-(V_{BE,N}+|V_{BE,P|})}{R43+R44}
+\end{align}
+
+The two emitter resistors linearize the transfer characteritics 
+of the output transistors and limits thermal runaway. The main purpose of those
+transistors, is to turn small changes in Vbe into current chnages, therefore
+the small signal voltage gain is $A_N \approx 1$.
+The output impedance, can be approximated by 
+\begin{align}
+    R_{out} \approx \frac{r_e}{\beta + 1} + R43 + R44
+\end{align}
+Where $r_e \approx \frac{V_T}{I_E}$
+
+\subsection{Simulation}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[]{SIM_output_I.png}
+\end{figure}
+
+
+\subsection{Realization}
+The circuit was then built and realized:
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{measurement_graph.png}
+    \caption{Measurements of the amplifier. The orange trace is from
+    after the differential amplifier, to show much the signal is gained. The blue trace is
+    from the output of the amplifier itself, so somewhat larger. The input signal
+    is a 10kHz sinewave with an amplitude of 20mV.}
+\end{figure}
