@@ -21,11 +21,11 @@ It is assumed that the BC547 has an beta factor of $\beta = 325$ and we aim for 
 The current sink in bottom tries to draw 4mA of current, thus  $I_{Ecm} = 2mA$ must run in each branch of the Amplifier.
 The collector resistance then becomes 
 \begin{align}
-    V_{Ccm} = V_{CC} - R_{Ccm}\cdot I_{Ecm}\alpha \Rightarrow R_{Ccm} = \frac{V_{CC} - V_{Ccm}}{I_{Ecm}\alpha} = 8.175k\Omega
+    V_{Ccm} = V_{CC} - R_{Ccm}\cdot I_{Ecm}\alpha \Rightarrow R_{Ccm} = \frac{V_{CC} - V_{Ccm}}{I_{Ecm}\alpha} = 7.774k\Omega
 \end{align} 
 
 \textbf{AC analysis}\\
-For AC analysis, the intrinsic emitter resistance is $r_e = \frac{V_T}{2mA} = 12.5\Omega$ and the external emitter resistance is $R_E = 110\Omega$
+For AC analysis, the intrinsic emitter resistance is $r_e = \frac{V_T}{2mA} = 12.5\Omega$ and the external emitter resistance is $R_E = 75\Omega$
 this yields a total emitter resistance of $r_{etot} = 12.5\Omega + 75\Omega = 87.5\Omega$. Thus changes to temperature only affects the term 
 with $V_T$, which is $\approx \pm 2mV/C$
 
@@ -38,7 +38,7 @@ Since the other input of the differential amplifier is grounded, the differentia
     \frac{v_d}{2} = i_b r_\pi + i_e R_E\\
     r_\pi = \beta r_e\\
     i_e = (\beta + 1)i_b\\
-    \Downarrow
+    \Downarrow\\
     v_d = 2i_b(\beta r_e + (\beta + 1)R_E)
 \end{align}
 
@@ -61,8 +61,11 @@ It should be noted that the expression for the differential gain gets rather len
 than $\beta \gg 1$, the 1 term in $(\beta +1)$, can safely be ignored. This factors out $\beta$ in both numerator and denominator:
 \begin{align}
     2(\beta r_e + (\beta + 1) R_E) \Rightarrow \approx \beta(r_e + R_E)\\
-     A_{diff} \approx - \frac{R_C}{2(r_e + R_E)}
+     A_{diff} \approx - \frac{R_C}{2(r_e + R_E)} \approx -42.726
 \end{align}
+
+The commonmode voltage can be expressed as:
+%skriv noget her jakob!
 
 
 \subsection{Current Sink}

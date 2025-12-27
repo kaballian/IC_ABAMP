@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber assignment_projectAB"] 0 "assignment_projectAB.bcf" "assignment_projectAB.bbl" "assignment_projectAB" 1766867455.61042 -1
-  "assignment_projectAB.bcf" 1766867455 106450 b70b9d6197cac106e3c1a12a05e832e8 "pdflatex"
+["biber assignment_projectAB"] 0 "assignment_projectAB.bcf" "assignment_projectAB.bbl" "assignment_projectAB" 1766868328.40026 -1
+  "assignment_projectAB.bcf" 1766868327 106450 b70b9d6197cac106e3c1a12a05e832e8 "pdflatex"
   (generated)
   "assignment_projectAB.bbl"
   "assignment_projectAB.blg"
   (rewritten before read)
-["pdflatex"] 1766867452.33708 "c:/Users/alext/Documents/IC/IC_project/IC_ABAMP/assignment_projectAB.tex" "assignment_projectAB.pdf" "assignment_projectAB" 1766867455.61126 0
+["pdflatex"] 1766868325.03281 "c:/Users/alext/Documents/IC/IC_project/IC_ABAMP/assignment_projectAB.tex" "assignment_projectAB.pdf" "assignment_projectAB" 1766868328.40201 0
   "C:/Users/alext/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1764590634 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/alext/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1764590641 11548 13938e1c4b3b429c0028677d6b8287aa ""
   "C:/Users/alext/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1762163367 24225087 4a3fd7fefc4f3bd806c9711ae00aed09 ""
@@ -223,20 +223,20 @@
   "C:/Users/alext/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
   "SIM_output_I.png" 1766866073 33326 b670a3d43e2abd1de7e8b9a3a79642a6 ""
   "VAS.png" 1766844499 9993 c746fa364a4fc42dd455cfa5f046b716 ""
-  "assignment_projectAB.aux" 1766867455 2162 9e94d20ff3d8798275b4c99d27a538d3 "pdflatex"
+  "assignment_projectAB.aux" 1766868327 2245 327637f432fc8ef2438acb717bd3bdc9 "pdflatex"
   "assignment_projectAB.bbl" 1766851546 0 d41d8cd98f00b204e9800998ecf8427e "biber assignment_projectAB"
-  "assignment_projectAB.run.xml" 1766867455 2336 af8439a7936ba1f294ac68c27b10a501 "pdflatex"
+  "assignment_projectAB.run.xml" 1766868327 2336 af8439a7936ba1f294ac68c27b10a501 "pdflatex"
   "assignment_projectAB.tex" 1766859882 953 2a4bbf988ae9d1852713e4ec5cabc479 ""
   "buffer.png" 1766852471 6609 a90cb970cc01a29f8cd724651de638e3 ""
   "c:/Users/alext/Documents/IC/IC_project/IC_ABAMP/assignment_projectAB.tex" 1766859882 953 2a4bbf988ae9d1852713e4ec5cabc479 ""
   "diff_amp.png" 1766843579 14800 8a5340cd9c49de3c8701294ad2b2b5d5 ""
   "forside.tex" 1766867385 835 2735954a5eb09aa1a02f0d8da9886802 ""
-  "input_stage.tex" 1766844085 4265 af773603206f528b0ab3ed4d5c322a73 ""
+  "input_stage.tex" 1766868324 4354 905b300ffd5fb58df70c946abb4a2f70 ""
   "introduction.tex" 1766842250 1790 a6f005a03e6c41c584aeb4591346af21 ""
   "logo.png" 1766842250 41748 aad5cecc7be3fcb94850fa24fd69e97f ""
   "measurement_graph.png" 1766867240 92326 c4ddad8140fc560f0e4929ecf54c6b7e ""
   "output_stage.png" 1766859970 49890 21b185d2bc42e8c061d078112d3f74c8 ""
-  "power_stage.tex" 1766867451 2852 f5c0c10fdf131081642ce4f240366064 ""
+  "power_stage.tex" 1766867596 2949 35781c380007e953af4e22ffba47efda ""
   "unity_buffer.tex" 1766860868 1744 3df844e264607f821cb04fd44eb72f63 ""
   "vas_stage.tex" 1766860888 3443 fe154374401077765cadc6985ad073c2 ""
   (generated)

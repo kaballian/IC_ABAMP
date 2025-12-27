@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.3)  27 DEC 2025 21:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.3)  27 DEC 2025 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -951,7 +951,7 @@ File: output_stage.png Graphic file (type png)
 Package pdftex.def Info: output_stage.png  used on input line 13.
 (pdftex.def)             Requested size: 360.29568pt x 462.82489pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Underfull \hbox (badness 10000) in paragraph at lines 26--31
 
  []
 
@@ -961,14 +961,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--30
 <SIM_output_I.png, id=52, 298.86656pt x 263.48438pt>
 File: SIM_output_I.png Graphic file (type png)
 <use SIM_output_I.png>
-Package pdftex.def Info: SIM_output_I.png  used on input line 61.
+Package pdftex.def Info: SIM_output_I.png  used on input line 62.
 (pdftex.def)             Requested size: 298.86581pt x 263.48372pt.
-<measurement_graph.png, id=53, 462.528pt x 346.896pt>
+ [9 <./SIM_output_I.png>]
+<measurement_graph.png, id=58, 462.528pt x 346.896pt>
 File: measurement_graph.png Graphic file (type png)
 <use measurement_graph.png>
-Package pdftex.def Info: measurement_graph.png  used on input line 70.
+Package pdftex.def Info: measurement_graph.png  used on input line 71.
 (pdftex.def)             Requested size: 360.29568pt x 270.23372pt.
-) [9 <./SIM_output_I.png>] [10 <./measurement_graph.png>] (assignment_projectAB.aux)
+) [10
+
+ <./measurement_graph.png>] (assignment_projectAB.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -986,7 +989,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  117i,10n,121p,787b,1732s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\alext\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alext/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on assignment_projectAB.pdf (10 pages, 358043 bytes).
+Output written on assignment_projectAB.pdf (10 pages, 358168 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
