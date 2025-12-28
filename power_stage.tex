@@ -106,13 +106,16 @@ With a RMS current of $I_{OUT} = 95.832mA$ running in the $16\Omega$ load, the p
 This simulated power is a little lower than intended. 
 \clearpage
 \subsection{Realization}
-The circuit was then built and realized:
+The circuit was the built and realized. The realized circuit can be seen on figure \ref{implementation}. 
+The circuit was tested the same way the simulation was, 
+the settinges for the signal used can be seen on figure \ref{fig:input_signal}
 
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.7\textwidth]{realization.png}
     \caption{implementation on breadboard}
+    \label{implementation}
 \end{figure}
 
 \begin{figure}[!htb]
@@ -120,13 +123,37 @@ The circuit was then built and realized:
     \includegraphics[width=0.5\textwidth]{input_sig.png}
     \caption{The chosen input signal is a pure signe wave with a 20mV amplitude 
     at 10kHz}
+    \label{fig:input_signal}
 \end{figure}
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.7\textwidth]{measurement_graph.png}
     \caption{Measurements of the amplifier. The orange trace is from
     after the differential amplifier, to show much the signal is gained. The blue trace is
-    from the output of the amplifier itself, so somewhat larger. The input signal
-    is a 10kHz sinewave with an amplitude of 20mV.}
+    from the output of the amplifier itself.}
+    \label{fig:output_signal}
 \end{figure}
+
+
+\begin{table}[!htb]
+\centering
+\caption{Measured DC voltages of bias points in amplifier circuit}
+\label{table_dc_points}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+ Class AB DC points & Diff sig & Diff No sig  & CE amp & C amp & AB NPN & AB NPN\\ \hline
+ V\_C & 1.83 & 2.18 & -0.15 & 0.88 & 15 & -15.01\\ \hline
+ V\_E & -0.644 & -0.645 & -6.75 & -0.82 & -0.76 & -0.28\\ \hline
+ V\_B & 0 & 0 & -5.6 & -0.16 & 0.44 & -1.02\\ \hline
+\end{tabular}
+\end{table}
+
+
+On figure \ref{fig:output_signal} the amplification results can be seen for after 
+the common mode amplifier and the commen emitter amplifer(voltage amplification stage). 
+The final gain for the amplifier is somewhat lower than expected.
+On table \ref{table_dc_points} the DC point for the diffrent transistors is shown, here it can be seen that 
+the DC points are the with in resenable range and they are in the active region
+
+
 
