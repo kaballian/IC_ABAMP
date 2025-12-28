@@ -20,7 +20,7 @@ To bias the two output transistors, a Vbe multiplier has been implemented.
 Q15 and the two resistors R37/38 generate a controlled voltage, 
 which is used to determine the working point of the output follow the expression:
 \begin{align}
-    V_{bias} \approx V_{beQ15} \cdot (1+\frac{R37}{R38}) \approx 2
+    V_{bias} \approx V_{beQ15} \cdot (1+\frac{R37}{R38}) \approx 2V_{BE}
 \end{align}
 
 This then becomes a scale factor for the transistors base emitter voltage, meaning
@@ -34,9 +34,9 @@ the input stage, however this sinks $3mA$ of current.
 This means that the voltages at the output stages are.
 
 \begin{align}
-    V_{R47} = 3mA \cdot 4.8k\Omega = 14.4V
-    V_{Bm3} = 0.6V
-    V_{R42} = 3mA \cdot 4.5k\Omega = 13.5V
+    V_{R47} = 3mA \cdot 4.8k\Omega = 14.4V\\
+    V_{Bm3} = 0.6V\\
+    V_{R42} = 3mA \cdot 4.5k\Omega = 13.5V\\
     V_{Bm4} = -15V + 13.5V = -1.5V
 \end{align}
 
@@ -45,6 +45,8 @@ Quiescent current through the output stage can then be expressed as:
 \begin{align}
     I_{Q} \approx \frac{V_{bias}-(V_{BE,N}+|V_{BE,P|})}{R43+R44}
 \end{align}
+This indicates that the output stage is somewhat sensitive to changes in
+changes in both transistors $V_{be}$ due to fact that those resistances, R43 + R44 are so small.\\
 
 The two emitter resistors linearize the transfer characteritics 
 of the output transistors and limits thermal runaway. The main purpose of those
@@ -66,7 +68,20 @@ Where $r_e \approx \frac{V_T}{I_E}$
 \subsection{Realization}
 The circuit was then built and realized:
 
-\begin{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{realization.png}
+    \caption{implementation on breadboard}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{input_sig.png}
+    \caption{The chosen input signal is a pure signe wave with a 20mV amplitude 
+    at 10kHz}
+\end{figure}
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=0.7\textwidth]{measurement_graph.png}
     \caption{Measurements of the amplifier. The orange trace is from
@@ -74,3 +89,4 @@ The circuit was then built and realized:
     from the output of the amplifier itself, so somewhat larger. The input signal
     is a 10kHz sinewave with an amplitude of 20mV.}
 \end{figure}
+

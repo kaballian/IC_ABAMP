@@ -37,22 +37,22 @@ capacitor is set in parallel with the emitter resistance. This essentially
 shapes the gain when an AC input is given.
 
 \begin{align}
-    A_{Ndc} = \frac{R8}{R9} = 2
+    A_{Ndc} = \frac{R8}{R9} = 2\\
     A_{Nac} = \frac{R8}{R9||R28} = 3
 \end{align}
 
 This happends when when the corner frequency of:
 \begin{align}
-    f_c = \frac{1}{2\pi R28 C6} = \frac{1}{2 \pi \cdot 3k\Omega \cdot 47nF} \approx 1.13kHz 
+    f_c = \frac{1}{2\pi R28 C6} = \frac{1}{2 \pi \cdot 3k\Omega \cdot 47nF} \approx 1.13Hz 
 \end{align}
 is exceeded. 
 
 
 Other parameters for the stage:
 \begin{align}
-    V_C = V_{CC}-R_C I_E \alpha = 0.046V
-    V_E = I_E R_E + V_{EE} = -7.5V
-    V_B = V_E + V_{BE} = -6.8V
+    V_C = V_{CC}-R_C I_E \alpha = 0.046V\\
+    V_E = I_E R_E + V_{EE} = -7.5V\\
+    V_B = V_E + V_{BE} = -6.8V\\
     I_B = \frac{I_E}{(\beta + 1)} \approx 15.3\mu A
 \end{align}
 

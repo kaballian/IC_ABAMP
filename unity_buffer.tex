@@ -17,13 +17,13 @@ sized standing current is necessary. To drive the stage a ratherl
 large emitter current of 28mA is chosen.
 
 \begin{align}
-    V_E = V_{SS} + I_E R46 = -1V
-    V_B = V_B + 0.7V = -0.3V
+    V_E = V_{SS} + I_E R46 = -1V\\
+    V_B = V_B + 0.7V = -0.3V\\
     I_B = \frac{I_E}{\beta + 1} \approx 85\mu A
 \end{align}
 The biasing resistor then becomes:
 \begin{align}
-    R32 = \frac{V_{SS}-V_B}{I_B} \approx 178k\omega
+    R32 = \frac{V_{SS}-V_B}{I_B} \approx 178k\Omega
 \end{align}
 
 The collector current then becomes:
@@ -35,14 +35,14 @@ and to sanity check if the current is possible the voltage
 across the collector and emitter must be above 0.3V
 
 \begin{align}
-    V_C = Vcc - I_C R49 = -0.074V
+    V_C = Vcc - I_C R49 = -0.074V\\
     V_{CE} = V_C - V_E = 0.926V
 \end{align}
 
 This shows that the unity gain buffer can drive this configuration.\\
 The small signal parameters becomes:
 \begin{align}
-    r_e \approx \frac{V_T}{I_E} = \frac{25mV}{28mA} = 0.893\Omega
+    r_e \approx \frac{V_T}{I_E} = \frac{25mV}{28mA} = 0.893\Omega\\
     r_{\pi} = \beta r_e \approx 290\Omega
 \end{align}
 

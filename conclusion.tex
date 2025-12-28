@@ -1,0 +1,20 @@
+\section{conclusion}
+It can then be concluded that the audio amplifier works as intended
+and that it mostly satisfies our requirements, set in the specification.
+However, we fell short of the gain goal of $\approx = 126$,
+we achieved $\approx 87$, the measured signal peak of the output was
+
+\begin{align}
+    V_{out}Peak = 1.749V\\
+    V_{out}RMS = \frac{1.749V}{\sqrt{2}} = 1.236V_{RMS}
+\end{align}
+
+Whereas the input rms is roughly $V_{in}RMS = 0.014V$
+this leads to a input to output ratio of 
+\begin{align}
+    \frac{V_{out}}{V_{in}} = \frac{1.236V}{0.014} \approx 87.45
+\end{align}
+
+As for power, the output current becomes $\frac{1.236}{16\Omega} = 77.25mA_{RMS}$
+which results in $1.749V \cdot 77.25mA = 95.53mW$ of power being drawn, this is
+also not close our target of 200.
