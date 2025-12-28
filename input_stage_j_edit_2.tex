@@ -1,0 +1,122 @@
+\section{Input stage}
+
+The first part of the amplifier is the input stage, this specific implementation is build around a pair of NPN transistors.
+This particular implementation includes a tail current source, more specifcally a current mirror build as a sink.
+
+
+\subsection{topology}
+\subsubsection{differential pair}
+Q4 and Q5 is an NPN differential pair, with R3 and R2 as collector loads and R15 and R16 as emitter degeneration resistors.
+This create a single-ended output differential amplifier. The emitter resistances are included to negate the temperature dependence 
+of BJT's and to make the transistor have a more linear behavior. This however changes how the transistors transconductance is calculated
+from $gm = \frac{I_C}{V_T}$ to $gm \approx \frac{1}{R_E}$, if and only if $gm R_E\gg 1$.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{diff_amp.png}
+\end{figure}
+
+\textbf{DC analysis}\\
+It is assumed that the BC547 has an beta factor of $\beta = 325$ and we aim for a diff amp gain of roughly $ A_{diff} \approx 42$.
+The current sink in bottom tries to draw 4mA of current, thus  $I_{Ecm} = 2mA$ must run in each branch of the Amplifier.
+The collector resistance then becomes 
+\begin{align}
+    V_{Ccm} = V_{CC} - R_{Ccm}\cdot I_{Ecm}\alpha \Rightarrow R_{Ccm} = \frac{V_{CC} - V_{Ccm}}{I_{Ecm}\alpha} = 7.774k\Omega
+\end{align} 
+
+\textbf{AC analysis}\\
+For AC analysis, the intrinsic emitter resistance is $r_e = \frac{V_T}{2mA} = 12.5\Omega$ and the external emitter resistance is $R_E = 75\Omega$
+this yields a total emitter resistance of $r_{etot} = 12.5\Omega + 75\Omega = 87.5\Omega$. Thus changes to temperature only affects the term 
+with $V_T$, which is $\approx \pm 2mV/C$
+
+The goal here is to relate the differential input voltage $V_d$ to the output voltage $V_o$, by elimintating the internal transistor current $i_b$,
+this will yield the gain. Since the desired gain for this Amplifier is chosen, we can use this to find the emitter resistance, which stated earlier is
+$R_E = 75\Omega$.
+
+Since the other input of the differential amplifier is grounded, the differential voltage for Q4 becomes:
+\begin{align}
+    \frac{v_{In diff}}{2} = i_b r_\pi + i_e R_E\\
+    r_\pi = \beta r_e\\
+    i_e = (\beta + 1)i_b\\
+    \Downarrow\\
+    v_d = 2i_b(\beta r_e + (\beta + 1)R_E)
+\end{align}
+
+And the common mode voltage then becomes:
+\begin{align}
+    v_{Out diff} = -\beta \cdot i_{bcm}\cdot R_{Ccm}
+\end{align}
+These two defines the differential gain:
+\begin{align}
+    A_{diff} = \frac{v_{Out diff}}{v_{In diff}} = -\frac{\beta R_C}{2(\beta r_e + (\beta + 1) R_E)}
+\end{align}
+
+Since the gain has already been chosen in the design stage, as mentioned ealier, $ A_{diff} \approx 42$.
+The emitter resistance can be calculated, by solving for $R_E$:
+\begin{align}
+    A_{diff} \rightarrow R_E \approx 75\Omega
+\end{align}
+
+It should be noted that the expression for the differential gain gets rather lengthy when expanded, thus for gains much larger
+than $\beta \gg 1$, the 1 term in $(\beta +1)$, can safely be ignored. This factors out $\beta$ in both numerator and denominator:
+\begin{align}
+    2(\beta r_e + (\beta + 1) R_E) \Rightarrow \approx \beta(r_e + R_E)\\
+     A_{diff} \approx - \frac{R_C}{2(r_e + R_E)} \approx -42.726
+\end{align}
+
+%skriv noget her jakob!
+It is desirable to know the common mode rejections ratio, and in order to find that, the common mode gain is needed. 
+The common mode gain is given by the common mode input voltage over the common mode output voltage. 
+But in order to express them the value of $R_{EE}$ needs to be known. 
+$R_{EE}$ is placed to reduce the stress on the transistor in the current mirror. 
+An assumption of the collector emitter voltage being 0.3V is made to ensure that the transistor is operating in the active region. Based on this assumsion the expression for $R_{EE}$ is given by
+
+\begin{align}
+    0V - V_{BE} - R_E \cdot I_E - 2 \cdot I_E \cdot R_{EE} - V_{CE} - V_{EE} = 0V \\
+    R_{EE} = \frac{ V_{BE} - R_E \cdot I_E - V_{CE} - V_{EE}}{2 \cdot I_E} = 3.838 k \Omega \approx 3.9 k \Omega
+\end{align}
+
+Now the common mode input voltage can be expressed as:
+\begin{align}
+    v_{In CM} = i_b \cdot (\beta + 1) \cdot r_e + i_b \cdot (\beta +1) \cdot R_E + 2 \cdot i_b \cdot (\beta +1) \cdot R_{EE}
+\end{align}
+The times 2 comes from the fact that know there is a contribution from both branches. The output common mode is given by:
+\begin{align}
+    v_{Out CM} = - \beta \cdot i_b \cdot R_C
+\end{align}
+With the two above equations the common mode gain can be expressed as:
+ \begin{align}
+    A_{CM} = \frac{v_{Out CM}}{v_{In CM}} =\frac{ - \beta \cdot i_b \cdot R_C}{ i_b \cdot ( \beta + 1) \cdot r_e + i_b \cdot ( \beta +1) \cdot R_E + 2 \cdot i_b \cdot ( \beta +1)}
+\end{align}
+In the above equation $i_b$ can be removed because it is multiplied on both the denominator and numerator. Then by combining common expressions in the denominator then the gain can be expressed as:
+  
+\begin{align}
+    A_{CM} =\frac{ - \beta \cdot i_b \cdot R_C }{( \beta +1) \cdot (r_e + R_E + 2\cdot R_{EE})} = - 0.948
+\end{align}
+
+Now that both the differential and common mode gain is known the common mode rejection ration can be calculated. It is given as:
+\begin{align}
+    CMRR = 20 \cdot \log(\frac{A_{diff}}{A_{CM}}) = 33.078 dB
+\end{align}
+
+
+\subsection{Current Sink}
+The pupose of the current mirror is to supply, or in this case "sink" the required current for the differential amplifier.
+This means that it should be specified to draw the sum of the currents leaving both branches of the diff amp.
+Thus the equations becomes:
+\begin{align}
+    I_{CQ6} = I_{EEcm} = 4mA\\
+\end{align}
+Because it is a BC547 again, the same $\beta = 325$ is assumed, this means that current entering the base of Q6.
+\begin{align}
+    I_{BQ6} = \frac{I_{CQ6}}{\beta} \approx 12 \mu A\\
+\end{align}
+Since the current mirror is comprised to two NPN transistors, the current drawn should be the sum of the collector 
+current $I_{CQ5}$ and 2 base currents.
+\begin{align}
+    I_{RCQ5} = 2 I_{BQ6} + I_{CQ5} = 4.025mA
+\end{align}  
+Therefore the resistance to define the reference current becomes:
+\begin{align}
+    R_{ref} = \frac{V_{CC}-V_{EE}}{I_{RCQ5}} \approx 7.5k\Omega
+\end{align} 

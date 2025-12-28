@@ -59,11 +59,51 @@ The output impedance, can be approximated by
 Where $r_e \approx \frac{V_T}{I_E}$
 
 \subsection{Simulation}
+Using the calculated values from the analysis, the circuit was then 
+simulated in LTspice. The complete circuit can be seen below. 
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{complete_circuit.png}
+    \caption{Complete circuit in LTspice.}
+\end{figure}
+Using the \textit{.tren} spice directive to test the circuit and checking for behavior.
+
+
+
+
+
+Grounding both of the inputs and probing the simulation model, resulted in a measurement of
+1.468V at the collector of Q4 and having its emitter sit a diode drop below ground, means that
+this transistor is in the active region. At Dc the current sink through R27 is around 3.6mA.\\
+
+As for the voltage amplification stage, the collector sits at 0.56V and the emitter at 
+-7.76V, this means that this coupling also is in the active region. With an emitter current of roughly
+4.8mA\\
+
+In the output stage, the current drawn thought the vbe multiplier is roughly 2.94mA, which is close to the 
+desired 3mA. The lower bias point sits at $\approx -474mV$, while
+the upper bias point is at $\approx 842mV$, this means that there is 
+approximately a multiple of 2 base emitter voltage difference between the two points, which is intended.\\
+
+Lastly the Quiescent current, at DC, running through R42 is 1.92mA. This current is flowing to load, as it seems to
+be strongly tied to ground. There is only 30mV at the collector of M4, so the Vbe of M4 is not high enough
+to draw the current at this stage.
+
+
+
+
 \begin{figure}[!htb]
     \centering
     \includegraphics[]{SIM_output_I.png}
+    \caption{RMS current measurement at the output of the amplification, more specifically
+    the current running in the load}
 \end{figure}
-
+With a RMS current of $I_{OUT} = 95.832mA$ running in the $16\Omega$ load, the power can be calculated:
+\begin{align}
+    V_{OUT} = I_{RMS} \cdot R_{LOAD} = 95.832mA \cdot 16\Omega = 1.5328 V_{RMS}\\
+    P_{OUT} = I_{RMS} \cdot V_{OUT} = 0.146W
+\end{align}
+This simulated power is a little lower than intended. 
 \clearpage
 \subsection{Realization}
 The circuit was then built and realized:

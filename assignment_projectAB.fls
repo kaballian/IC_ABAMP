@@ -381,9 +381,9 @@ INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm100
 INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT .\input_stage_j_edit.tex
-INPUT .\input_stage_j_edit.tex
-INPUT input_stage_j_edit.tex
+INPUT .\input_stage_j_edit_2.tex
+INPUT .\input_stage_j_edit_2.tex
+INPUT input_stage_j_edit_2.tex
 INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT .\diff_amp.png
 INPUT .\diff_amp.png
@@ -422,6 +422,14 @@ INPUT .\output_stage.png
 INPUT .\output_stage.png
 INPUT .\output_stage.png
 INPUT .\output_stage.png
+INPUT .\complete_circuit.png
+INPUT .\complete_circuit.png
+INPUT .\complete_circuit.png
+INPUT .\complete_circuit.png
+INPUT .\complete_circuit.png
+INPUT .\complete_circuit.png
+INPUT .\complete_circuit.png
+INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT .\SIM_output_I.png
 INPUT .\SIM_output_I.png
 INPUT .\SIM_output_I.png
@@ -480,3 +488,5 @@ INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT C:\Users\alext\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
